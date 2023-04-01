@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: bisque;
+  padding-top: 100px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  max-width: 640px;
+  width: 100%;
+  margin-bottom: 56px;
+  justify-content: space-between;
+}
+form input {
+  font-size: 20px;
+  padding: 8px;
+  width: 500px;
+}
+form button {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.marcarTexto {
+  text-decoration: line-through;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 50px;
+}
+
