@@ -1,0 +1,90 @@
+@use 'config/reset';
+@use 'config/variaveis.scss';
+
+body {
+  background-color: variaveis.$corDeFundo;
+  font-family: variaveis.$fontPrincipal;
+}
+
+header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: variaveis.$corCabecalho;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .menu {
+      float: right;
+
+      li {
+        display: inline;
+
+        a {
+          text-decoration: none;
+          padding: 12px;
+          color: variaveis.$corMenu;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+section {
+  padding: 56px 0;
+
+  .products {
+    display: flex;
+    li {
+      list-style-type: none;
+    }
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+  }
+  .product-button {
+    display: block;
+    background-color: variaveis.$corBotao;
+    color: variaveis.$corMenu;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: #4cd137;
+    }
+  }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+  section {
+    .container {
+      max-width: 80%;
+  }
+    .products {
+      grid-template-columns: repeat(2, 48.5%);
+      column-gap: 3%;
+
+    }
+  }
+}
+@media screen and (max-width: variaveis.$phone) {
+  section {
+    .products {
+      display: block;
+      max-width: 50%;
+    }
+    .product-item  {
+      margin-bottom: 32px;
+    }
+  }
+}

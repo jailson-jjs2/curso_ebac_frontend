@@ -1,0 +1,84 @@
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #f5f6fa;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #182C61;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .menu {
+  float: right;
+}
+header .container .menu li {
+  display: inline;
+}
+header .container .menu li a {
+  text-decoration: none;
+  padding: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+section {
+  padding: 56px 0;
+}
+section .products {
+  display: flex;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+}
+section .products li {
+  list-style-type: none;
+}
+section .product-button {
+  display: block;
+  background-color: #44bd32;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+section .product-button:hover {
+  background-color: #4cd137;
+}
+
+@media screen and (max-width: 1023px) {
+  section .container {
+    max-width: 80%;
+  }
+  section .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+@media screen and (max-width: 767px) {
+  section .products {
+    display: block;
+    max-width: 50%;
+  }
+  section .product-item {
+    margin-bottom: 32px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
