@@ -1,0 +1,12 @@
+@use 'variaveis';
+
+body {
+  background-color: variaveis.$corPrincipal;
+  display: flex;
+  justify-content: center;
+  h1 {
+    padding-top: 100px;
+    align-items: center;
+    color: white;
+  }
+}
