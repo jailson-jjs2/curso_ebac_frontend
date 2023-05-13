@@ -1,21 +1,28 @@
-function Produdo (id, nome) {
+function Produto(id, nome) {
   this.id = id;
   this.nome = nome;
-}
-function Imposto (id, nome, icms) {
-  this.icms = icms;
-  Produdo.call(this, id, nome);
-}
-function Item (id, nome, categoria, desconto, valor, icms) {
+  }
+  
+  function ProdutoTributavel(id, nome, imposto) {
+  this.imposto = imposto;
+  Produto.call(this, id, nome);
+  }
+  
+  function Item(id, nome, categoria, desconto, valor, imposto) {
   this.categoria = categoria;
   this.desconto = desconto;
   this.valor = valor;
-  Imposto.call(this, id, nome, icms);
-}
-
-const item1 = new Item ('A003', 'Caneta Bic', 'Aventura', 0, 50, 17);
-const item2 = new Item ('A003', 'Caderno', 'Aventura', 0, 50, 17);
-const item3 = new Item ('A003', 'Livro Duna', 'Aventura', 10, 50, 17);
-
-
-console.log(item3);
+  ProdutoTributavel.call(this, id, nome, imposto);
+  }
+  
+  class MaterialEscolar extends Item {
+  constructor(id, nome, categoria, desconto, valor, imposto) {
+  super(id, nome, categoria, desconto, valor, imposto);
+  }
+  }
+  
+  const caderno = new MaterialEscolar('A004', 'Caderno', '12 Mat', 0, 50, 17);
+  const caneta = new MaterialEscolar('A003', 'Caneta Bic', '4 Cores', 0, 50, 17);
+  
+  console.log(caderno);
+  console.log(caneta);
